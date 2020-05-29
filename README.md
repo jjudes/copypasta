@@ -23,3 +23,7 @@ $ python good.py fish
 $ python copypasta.py Every star twinkled brightly and the wind rustled the tree branches - it was a chilly summer night. 
 ```
 👌EverY ⭐⭐star 😱twinkled 👌👌brightly 😩and😩😩 the💦💦 💨💨wind 💦💦Rustled the 🍃🍃tree 💦💦branches - it👌 was a 💯chilly💯💯 🔅🔅summer🔅 night.
+
+
+
+(Made possible by emojilib: https://github.com/muan/emojilib)
