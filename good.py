@@ -6,7 +6,7 @@ with open('emojis.json') as f:
 with open('names.json') as f:
     names = json.load(f)
     
-def good(thing, emoji):
+def good(thing, emoji, adj):
     
     string = ' '.join(thing)
     
@@ -26,16 +26,20 @@ def good(thing, emoji):
     if emoji is None: 
         emoji = emojis['ok_hand']['char']
     
+    if adj is None:
+        adj='good'
+    
     with open('good.txt') as f:
         copypasta = f.read()
     
-    print(copypasta.replace('%', string).replace('#', emoji))
+    print(copypasta.replace('%', string).replace('#', emoji).replace('$', adj))
 
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
     parser.add_argument('good', nargs='+', type=str, action='store')
     parser.add_argument('--emoji', '-e', dest='emoji', action='store')
+    parser.add_argument('--adjective', '-a', dest='adj', action='store')
     args = parser.parse_args()
     
-    good(args.good, args.emoji)
+    good(args.good, args.emoji, args.adj)
