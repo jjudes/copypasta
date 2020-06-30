@@ -1,5 +1,6 @@
 import json
 import argparse
+import codecs
 
 with open('emojis.json') as f:
     emojis = json.load(f)
@@ -29,7 +30,7 @@ def good(thing, emoji, adj):
     if adj is None:
         adj='good'
     
-    with open('good.txt', encoding='utf-8') as f:
+    with codecs.open('good.txt', encoding='utf-8') as f:
         copypasta = f.read()
     
     print(copypasta.replace('%', string).replace('#', emoji).replace('$', adj))
