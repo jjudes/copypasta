@@ -29,7 +29,7 @@ def good(thing, emoji, adj):
     if adj is None:
         adj='good'
     
-    with open('good.txt') as f:
+    with open('good.txt', encoding='utf-8') as f:
         copypasta = f.read()
     
     print(copypasta.replace('%', string).replace('#', emoji).replace('$', adj))
