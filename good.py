@@ -2,9 +2,9 @@ import json
 import argparse
 import codecs
 
-with open('emojis.json') as f:
+with open('emojis.json', encoding="utf8") as f:
     emojis = json.load(f)
-with open('names.json') as f:
+with open('names.json', encoding="utf8") as f:
     names = json.load(f)
     
 def good(thing, emoji, adj):
